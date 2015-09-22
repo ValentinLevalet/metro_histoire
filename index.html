@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+
+  <title>Drawer</title>
+  <meta name="viewport" content="width=device-width">
+
+  <link rel="stylesheet" href="styles/headers.css">
+  <link rel="stylesheet" href="styles/drawer.css">
+
+  <!--
+      This <style> and <link> is only used for the example code, is no needed for the real case use
+    -->
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: serif;
+      font-size: 10px;
+      background-color: #fff;
+      height: 100%;
+      overflow-x: hidden;
+    }
+
+    h2.bb-docs {
+      font-size: 1.8rem;
+      font-weight: lighter;
+      color: #666;
+      margin: -0.1rem 0 0;
+      background-color: #f5f5f5;
+      padding: 0.4rem 0.4rem 0.4rem 3rem;
+      border: solid 0.1rem #e8e8e8;
+    }
+
+    section[role="region"] {
+      height: 100%;
+      line-height: 1em;
+      font-size: 16px;
+    }
+
+    div[role="main"] {
+      background: #fff;
+      min-height: 100%;
+      overflow: hidden;
+      padding: 4em 1em;
+    }
+
+    div[role="main"] p {
+      margin: 1em 0;
+    }
+
+    /* Base icons */
+    section[data-type="sidebar"] > header .icon.icon-add {
+      background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2hpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYxIDY0LjE0MDk0OSwgMjAxMC8xMi8wNy0xMDo1NzowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo4RTlFMTExOTIwMjA2ODExODIyQUJFQTc4MUU4NEEyOSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpENjM1MzgyMUJGNzAxMUUxQkNDOEUwRkExQ0U5N0Q0QiIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpENjM1MzgyMEJGNzAxMUUxQkNDOEUwRkExQ0U5N0Q0QiIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M2IChNYWNpbnRvc2gpIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6Mzk0RjYxOUMzMTIwNjgxMTgyMkFBRjgxQ0IyNTAxM0UiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6OEU5RTExMTkyMDIwNjgxMTgyMkFCRUE3ODFFODRBMjkiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz45ZU6fAAAAiklEQVR42mL8//8/w0AAJoYBAqMW0w2wkKmPH4hVoOw7QPyRVAMYyUzVD4FYDsq+DMR6o3E8avGoxbiykxAQ78KjTxeI2aDs70B8DY9aZ2z5HJfFIIMvUclzGkB8c9AXmU+B+CyVgvrFaJE5avGoxQNSZBICzEBsAGVfAOK/9LJ4NI5HLSYIAAIMAKfZJ7+0GO5HAAAAAElFTkSuQmCC);
+    }
+
+    .explication {display: none;}
+
+    .station span {
+      display: block;
+    }
+
+   section[role="region"] > header:first-child {
+      background-color: #191970;
+      font-weight: bold;
+    }
+
+    section[role="region"] > header:first-child h1 {
+      font-style: normal;
+      white-space: normal;
+      line-height: 1em;
+    }
+
+    #drawer header {
+      position: fixed;
+      width: 100%;
+    }
+
+  </style>
+
+</head>
+
+<body role="application">
+
+  <section data-type="sidebar">
+    <header>
+      <menu type="toolbar">
+        <a href="#"><span class="icon icon-add">add</span></a>
+      </menu>
+      <h1>Stations</h1>
+    </header>
+    <nav>
+      <ul>
+        <li><a class="station" href="#"><span onClick="clic(this);" id="mairieMontroug">Mairie de Montrouge</span></a></li>
+        <li><a class="station" href="#"><span onClick="clic(this);" id="mont">Montparnasse-Bienvenüe</span></a></li>
+        <li><a class="station" href="#"><span onClick="clic(this);" id="gait">Gaîté</span></a></li>
+        <li><a class="station" name="rien" href="#">label</a></li>
+        <li><a class="station" name="rien2" href="#">label</a></li>
+      </ul>
+    </nav>
+  </section>
+
+  <section id="drawer" role="region">
+    <header>
+      <a href="#"><span class="icon icon-menu">hide sidebar</span></a>
+      <a href="#drawer"><span class="icon icon-menu">show sidebar</span></a>
+      <h1 id="titre">Métros</h1>
+    </header>
+    <div role="main" id="contenu"></div>
+
+  </section>
+  <script type="text/javascript">
+    function clic(element)
+    {
+       var ident = element.id;
+       var nom = element.textContent;
+       console.log(nom);
+
+       switch (ident){
+        case "mont":
+          document.getElementById("contenu").innerHTML="<p>À l'origine, il existait deux stations distinctes :</p><p>Montparnasse qui était une station de correspondance entre la ligne 4, propriété de la Compagnie du chemin de fer métropolitain de Paris (CMP), et la ligne 12, qui appartenait à la Société du chemin de fer électrique souterrain Nord-Sud de Paris. Elle se situait sous le boulevard du Montparnasse à l'entrée de l'ancienne gare de Paris-Montparnasse.<br>Bienvenüe, qui fut nommée en hommage à l'ingénieur Fulgence Bienvenüe, le père du métro de Paris, et se situait derrière la gare de Paris-Montparnasse. Elle assurait la correspondance entre les lignes numérotées aujourd'hui 6 et 13.</p><p>À la fin des années 1930, un long couloir de correspondance relie les deux stations Montparnasse et Bienvenüe.</p><p>Le 6 octobre 1942, les deux stations fusionnent en une seule sous le nom de Montparnasse - Bienvenüe. C'est à cette époque qu'est ouverte la « gare du Maine » qui devient l'origine et le terminus des trains de grandes lignes ; l'ancienne gare, située place de Rennes (actuelle place du 18-Juin-1940), devenue trop étroite et trop courte, est d'abord réservée au trafic de banlieue.</p><p>Dans les années 1970, cette dernière est rasée pour céder la place à la tour Montparnasse. Aujourd'hui, tout le trafic SNCF est traité dans la nouvelle gare. Un trottoir roulant est installé dans le couloir souterrain qui assure la correspondance entre la ligne 6 et l'ex-ligne 14 (devenue la ligne 13), côté nouvelle gare, et les lignes 4 et 12, côté rue de Rennes.</p><p>Les arrêts des lignes 4 et 12 sont situés au nord (sous la place du 18-Juin-1940) tandis que les arrêts des lignes 6 et 13 se trouvent au sud près de la porte Océane, à côté de la gare SNCF.</p><p>En 2002, l'ancien trottoir roulant est remplacé par un trottoir roulant rapide. Mais en mai 2009, la RATP annonce qu'il sera démonté et remplacé en mars 2011 par un trottoir roulant classique, en raison de « nombreuses réclamations de la clientèle relatives à la sécurité et au manque de fiabilité ».</p>";
+          break;
+        case "gait":
+        document.getElementById("contenu").innerHTML="<p>La station est ouverte en 1937.</p><p>Le nom provient de la rue de la Gaîté qui était un chemin de terre en 1730, puis une section du chemin vicinal qui menait de la barrière du Montparnasse à Clamart. Son vocable provient des barrières du Maine et du Montparnasse, toutes proches. Des guinguettes, restaurants et théâtres s’y étaient agglutinés et firent de cette rue leur artère principale.<br>Près de l'espace de vente des titres de transport, un couloir transversal rend possible la traversée de l'avenue du Maine qui est infranchissable à cet endroit au niveau de la voirie en raison de la trémie d'accès sud au souterrain de cette avenue ; celui-ci a été créé pour que les automobiles puissent passer sous l'esplanade de la place Raoul-Dautry située devant la gare Montparnasse. Le passage transversal permet aux piétons marchant sur le trottoir situé du côté des numéros impairs de l'avenue du Maine (côté est) de se rendre au centre commercial Gaîté, du côté ouest.</p>";
+          break;
+        case "mairieMontroug":
+          document.getElementById("contenu").innerHTML="<p>L'ouverture de Mairie de Montrouge, qui intervient le 23 mars 2013, constitue la première étape d'une extension de la ligne 4 jusqu'à Bagneux (prévue pour 2019), qui était envisagée depuis 1929 selon un parcours différent. En 2004, le coût de ce premier tronçon a été évalué à 152 millions d'euros pour une longueur de 780 mètres.</p><p>Par la suite, la ligne atteindra Verdun-Sud entre le cimetière de Bagneux et le Fort de Montrouge, puis le terminus Bagneux au nord de cette commune.</p><p>La ligne devrait permettre à 37 000 voyageurs par jour d'avoir un accès direct au réseau métropolitain. Aux heures de pointe, 4 700 entrants ou sortants sont attendus.</p><p>Elle a vu entrer 2 916 681 voyageurs sur les dix mois d'ouverture en 2013, ce qui la place à la 184 position des stations de métro pour sa fréquentation sur 302.</p>";
+          break;
+        default:
+          console.log("pas trouvé");
+       }
+       document.getElementById("titre").innerHTML=nom;
+    }
+
+  </script>
+
+
+</body>
+</html>
