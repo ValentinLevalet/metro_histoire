@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
 
-  <title>Drawer</title>
+  <title>Métros</title>
   <meta name="viewport" content="width=device-width">
 
   <link rel="stylesheet" href="styles/headers.css">
@@ -43,11 +43,11 @@
       background: #fff;
       min-height: 100%;
       overflow: hidden;
-      padding: 4em 1em;
+      padding: 4em 1em 1em;
     }
 
     div[role="main"] p {
-      margin: 1em 0;
+      margin: 0 0 1em 0;
     }
 
     /* Base icons */
@@ -73,8 +73,23 @@
     }
 
     #drawer header {
+      display: table;
       position: fixed;
       width: 100%;
+    }
+
+    #drawer h1 {
+      display: table-cell;
+      padding-left: 0;
+      padding-right: 35px;
+      vertical-align: middle;
+      width: 100%;
+    }
+
+    .station {
+        padding-top: 1em;
+        padding-bottom: 1em;
+        padding-left: 1em;
     }
 
   </style>
@@ -95,6 +110,7 @@
         <li><a class="station" href="#"><span onClick="clic(this);" id="mairieMontroug">Mairie de Montrouge</span></a></li>
         <li><a class="station" href="#"><span onClick="clic(this);" id="mont">Montparnasse-Bienvenüe</span></a></li>
         <li><a class="station" href="#"><span onClick="clic(this);" id="gait">Gaîté</span></a></li>
+        <li><a class="station" href="#"><span onClick="clic(this);" id="vet">École vétérinaire de Maisons-Alfort</span></a></li>
         <li><a class="station" name="rien" href="#">label</a></li>
         <li><a class="station" name="rien2" href="#">label</a></li>
       </ul>
@@ -126,6 +142,9 @@
           break;
         case "mairieMontroug":
           document.getElementById("contenu").innerHTML="<p>L'ouverture de Mairie de Montrouge, qui intervient le 23 mars 2013, constitue la première étape d'une extension de la ligne 4 jusqu'à Bagneux (prévue pour 2019), qui était envisagée depuis 1929 selon un parcours différent. En 2004, le coût de ce premier tronçon a été évalué à 152 millions d'euros pour une longueur de 780 mètres.</p><p>Par la suite, la ligne atteindra Verdun-Sud entre le cimetière de Bagneux et le Fort de Montrouge, puis le terminus Bagneux au nord de cette commune.</p><p>La ligne devrait permettre à 37 000 voyageurs par jour d'avoir un accès direct au réseau métropolitain. Aux heures de pointe, 4 700 entrants ou sortants sont attendus.</p><p>Elle a vu entrer 2 916 681 voyageurs sur les dix mois d'ouverture en 2013, ce qui la place à la 184 position des stations de métro pour sa fréquentation sur 302.</p>";
+          break;
+        case "vet":
+          document.getElementById("contenu").innerHTML="<p>La station est ouverte le 19 septembre 1970.</p><p>En 1767, Louis XV le Bien-Aimé fonda la seconde école vétérinaire de France (après Lyon) sur le terrain du manoir médiéval d’Hallefort.</p><p>La station dispose de trois accès qui débouchent sur l'avenue du Général-Leclerc.</p><p>En 2011, 3 371 386 voyageurs sont entrés à cette station. En 2012, ils sont 3 150 748 voyageurs. Elle a vu entrer 3 175 166 voyageurs en 2013 ce qui la place à la 164 position des stations de métro pour sa fréquentation.</p>";
           break;
         default:
           console.log("pas trouvé");

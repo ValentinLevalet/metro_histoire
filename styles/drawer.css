@@ -188,14 +188,11 @@ section[data-type="sidebar"] > nav > ul > li > a {
   text-decoration: none;
   color: #fff;
   font-size: 1.6rem;
-  line-height: 4.35rem;
   border-bottom: 0.1rem solid #596068;
-  text-indent: 3rem;
   padding-right: 0.8rem;
   width: 100%;
   -moz-box-sizing: border-box;
   display: block;
   text-overflow: ellipsis;
-  white-space: nowrap;
   overflow: hidden;
 }
