@@ -19,10 +19,9 @@ section[role="region"] > header:first-child h1 {
   text-overflow: ellipsis;
   display: block;
   overflow: hidden;
-  margin: 0;
   padding: 0 1rem;
   height: 100%;
-  font-weight: 300;
+  font-weight: lighter;
   font-style: italic;
   text-align: center;
 }
@@ -117,6 +116,23 @@ section[role="region"] header h2 {
   line-height: 1.8rem;
 }
 
+/* ----------------------------------
+  right-to-left
+---------------------------------- */
+
+html[dir="rtl"] section[role="region"] > header:first-child menu {
+  float: left;
+}
+
+html[dir="rtl"] section[role="region"] > header:first-child button,
+html[dir="rtl"] section[role="region"] > header:first-child a {
+  float: right;
+}
+
+html[dir="rtl"] section[role="region"] > header:first-child .icon-back {
+  transform: rotate(180deg);
+}
+
 /* -----------------------------------------------------------------
   HEADER SKIN: default
   Default values in case we are not overriding them using
@@ -125,14 +141,11 @@ section[role="region"] header h2 {
 
 section[role="region"] > header:first-child {
   color: #fff;
-  display: table;
-  background-color: #191970;
+  background-color: #f97c17;
 }
 
 section[role="region"] > header:first-child h1 {
   color: #fff;
-  line-height: 1em;
-  white-space: normal;
 }
 
 section[role="region"] > header:first-child a,
