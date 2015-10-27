@@ -82,6 +82,9 @@ This <style> and <link> is only used for the example code, is no needed for the 
     line-height: 18px;
     position: absolute;
   }
+  .noselec {
+    display: none;
+  }
 </style>
 
 </head>
@@ -94,6 +97,7 @@ This <style> and <link> is only used for the example code, is no needed for the 
         <a href="#"><span class="icon icon-add">add</span></a>
       </menu>
       <h1>Stations</h1>
+      <input id="saisie" onkeyup="lettreSaisie();" autofocus>
     </header>
     <nav>
       <ul id="listeStations">
@@ -110,17 +114,6 @@ This <style> and <link> is only used for the example code, is no needed for the 
         <li><a class="station" href="#onthetop"><span onClick="clic(this);" id="placide">Saint-Placide</span></a></li>
         <li><a class="station" href="#onthetop"><span onClick="clic(this);" id="sulpice">Saint-Sulpice</span></a></li>
         <li><a class="station" href="#onthetop"><span onClick="clic(this);" id="germain">Saint-Germain-des-Prés</span></a></li>
-        <li><a class="station" href="#onthetop"><span onClick="clic(this);" id=""></span></a></li>
-        <li><a class="station" href="#onthetop"><span onClick="clic(this);" id=""></span></a></li>
-        <li><a class="station" href="#onthetop"><span onClick="clic(this);" id=""></span></a></li>
-        <li><a class="station" href="#onthetop"><span onClick="clic(this);" id=""></span></a></li>
-        <li><a class="station" href="#onthetop"><span onClick="clic(this);" id=""></span></a></li>
-        <li><a class="station" href="#onthetop"><span onClick="clic(this);" id=""></span></a></li>
-        <li><a class="station" href="#onthetop"><span onClick="clic(this);" id=""></span></a></li>
-        <li><a class="station" href="#onthetop"><span onClick="clic(this);" id=""></span></a></li>
-        <li><a class="station" href="#onthetop"><span onClick="clic(this);" id=""></span></a></li>
-        <li><a class="station" href="#onthetop"><span onClick="clic(this);" id=""></span></a></li>
-        <li><a class="station" href="#onthetop"><span onClick="clic(this);" id=""></span></a></li>
       </ul>
     </nav>
   </section>
@@ -181,25 +174,51 @@ This <style> and <link> is only used for the example code, is no needed for the 
         case "germain":
         document.getElementById("contenu").innerHTML="<span id='onthetop'></span><p>La station est ouverte le 9 janvier 1910.</p><p>Elle se trouve sous le boulevard Saint-Germain, entre le carrefour de la rue de Rennes et celui de la rue du Four.</p><p>Sa dénomination vient de l'église Saint-Germain-des-Prés et de la place Saint-Germain-des-Prés. Childebert 1er, fils de Clovis, fit bâtir une basilique à la demande de saint Germain, évêque de Paris. Ce dernier y fut inhumé, l’église prit dès lors son nom. On rajouta le qualificatif « des-Prés » pour la proximité des Prés-aux-Clercs et pour la distinguer de Saint-Germain-le-Vieux édifié dans la cité.</p><p>Chacune des deux sorties de cette station, situées de part et d'autre du boulevard Saint-Germain, juste à côté de l'église du même nom, est ornée d'un candélabre Val d'Osne.</p>";
         break;
-        case "":
-        document.getElementById("contenu").innerHTML="";
-        break;
-        case "":
-        document.getElementById("contenu").innerHTML="";
-        break;
-        case "":
-        document.getElementById("contenu").innerHTML="";
-        break;
-        case "":
-        document.getElementById("contenu").innerHTML="";
-        break;
-        case "":
-        document.getElementById("contenu").innerHTML="";
-        break;
         default:
         console.log("pas trouvé");
       }
       document.getElementById("titre").innerHTML=nom;
+    }
+
+    var nums = document.getElementById("listeStations");
+    var listLi = nums.getElementsByTagName("li");
+    var listItem = nums.getElementsByTagName("span");
+    /*for(var i = 0; i < listItem.length; i++){
+      listItem[i].classList.add("selec");
+    }*/
+    var arrayStations = [];
+
+    for (var i=0; i < listItem.length; i++) {
+      arrayStations.push(listItem[i].innerHTML);
+    }
+
+    console.log(listItem);
+
+    function lettreSaisie()
+    {
+      var x = document.getElementById("saisie").value;
+      var n = x.length;
+      var lettreStation = function (letter) {
+        var extrait = [];
+        var indStation = [];
+        for (var i = 0; i < letter.length; i += 1) {
+          //var extrait = letter[i].charAt(n - 1);
+          var indStation = extrait.push(letter[i].charAt(n - 1));
+          //console.log("premiere lettre"+extrait);
+          var indStation = extrait.filter(function(el){
+            return (el === x);
+          });
+          listLi[i].classList.add("noselec");
+
+          if(extrait[i] == x){
+            listLi[i].classList.remove("noselec");
+            // console.log("trouvé !");
+          }
+          
+        }
+        console.log("indStation "+indStation);
+      }
+      lettreStation(arrayStations);
     }
 
   </script>
