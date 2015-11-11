@@ -44,6 +44,9 @@
         case "germain":
         document.getElementById("contenu").innerHTML="<span id='onthetop'></span><p>La station est ouverte le 9 janvier 1910.</p><p>Elle se trouve sous le boulevard Saint-Germain, entre le carrefour de la rue de Rennes et celui de la rue du Four.</p><p>Sa dénomination vient de l'église Saint-Germain-des-Prés et de la place Saint-Germain-des-Prés. Childebert 1er, fils de Clovis, fit bâtir une basilique à la demande de saint Germain, évêque de Paris. Ce dernier y fut inhumé, l’église prit dès lors son nom. On rajouta le qualificatif « des-Prés » pour la proximité des Prés-aux-Clercs et pour la distinguer de Saint-Germain-le-Vieux édifié dans la cité.</p><p>Chacune des deux sorties de cette station, situées de part et d'autre du boulevard Saint-Germain, juste à côté de l'église du même nom, est ornée d'un candélabre Val d'Osne.</p>";
         break;
+        case "marcadet":
+        document.getElementById("contenu").innerHTML="<span id='onthetop'></span><p>Il y avait à l'origine deux stations distinctes :</p><ul><li>Marcadet, ouverte en 1908 sur la ligne 4 ;</li><li>Poissonniers, ouverte en 1916 sur la ligne A du Nord-Sud.</li></ul><p>À la suite de l'absorption de cette compagnie par la CMP en 1930, un couloir de correspondance est construit entre les deux stations. À sa mise en service le 25 août 1931, les deux stations prennent leur nom actuel, Marcadet – Poissonniers.</p><p>Elle porte donc le nom des deux rues suivantes :</p><ul><li>la rue Marcadet tient son nom d’un lieu-dit, la Mercade, situé à la Chapelle Saint Denis. Peut-être qu’on y tenait un marché, Marcadus, à l’époque de la foire du Lendit ;</li><li>la rue des Poissonniers est l’ancien chemin des Poissonniers emprunté dès 1307 par les marchands de poissons pêchés dans la mer du Nord.</li></ul>";
+        break;
         default:
         console.log("pas trouvé");
       }
@@ -101,9 +104,9 @@
       for (var i = listLi.length - 1; i >= 0; i--) {
         listLi[i].classList.remove("noselec");
       };
-      document.getElementById("annuler").classList.add("hidden");
+      //document.getElementById("annuler").classList.add("hidden");
     };
-
+/*
     function affichAnnul()
     {
       document.getElementById("annuler").classList.remove("hidden");
@@ -113,3 +116,4 @@
     {
       document.getElementById("annuler").classList.add("hidden");
     };
+    */

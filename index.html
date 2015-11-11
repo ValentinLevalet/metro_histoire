@@ -1,61 +1,60 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
+    <meta charset="utf-8">
 
-  <title>Métro</title>
-  <meta name="description" content="Hidden menu options triggered by the menu button in the header">
-  <meta name="viewport" content="width=device-width, user-scalable=no">
+    <title>Métro</title>
+    <meta name="description" content="Hidden menu options triggered by the menu button in the header">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
 
-  <link rel="stylesheet" href="styles/headers.css">
-  <link rel="stylesheet" href="styles/drawer.css">
-  <link rel="stylesheet" href="styles/input_areas.css">
-  <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/headers.css">
+    <link rel="stylesheet" href="styles/drawer.css">
+    <link rel="stylesheet" href="styles/input_areas.css">
+    <link rel="stylesheet" href="styles/style.css">
 
 </head>
 
 <body role="application">
 
-  <section data-type="sidebar">
-    <header>
-      <menu type="toolbar">
-        <a href="#"><span class="icon icon-add">add</span></a>
-      </menu>
-        <p>
-          <h1>Stations</h1>
-          <input id="saisie" type="search" onfocus="affichAnnul();" onblur="cachAnnul();" onkeyup="lettreSaisie();">
-          <button id="annuler" class="hidden" type="reset" onclick="annulRech();">&nbsp;</button>
-        </p>
-    </header>
-    <nav>
-      <ul id="listeStations">
-        <li><a class="station" href="#onthetop"><span onClick="clic(this);" id="mairieMontroug" class="l4">Mairie de Montrouge</span></a></li>
-        <li><a class="station" href="#onthetop"><span onClick="clic(this);" id="mont">Montparnasse-Bienvenüe</span></a></li>
-        <li><a class="station" href="#onthetop"><span onClick="clic(this);" id="gait">Gaîté</span></a></li>
-        <li><a class="station" href="#onthetop"><span onClick="clic(this);" id="vet">École vétérinaire de Maisons-Alfort</span></a></li>
-        <li><a class="station" href="#onthetop"><span onClick="clic(this);" id="orleans">Porte d'Orléans</span></a></li>
-        <li><a class="station" href="#onthetop"><span onClick="clic(this);" id="alesia">Alésia</span></a></li>
-        <li><a class="station" href="#onthetop"><span onClick="clic(this);" id="mouton">Mouton-Duvernet</span></a></li>
-        <li><a class="station" href="#onthetop"><span onClick="clic(this);" id="denfert">Denfert-Rochereau</span></a></li>
-        <li><a class="station" href="#onthetop"><span onClick="clic(this);" id="raspail">Raspail</span></a></li>
-        <li><a class="station" href="#onthetop"><span onClick="clic(this);" id="vavin">Vavin</span></a></li>
-        <li><a class="station" href="#onthetop"><span onClick="clic(this);" id="placide">Saint-Placide</span></a></li>
-        <li><a class="station" href="#onthetop"><span onClick="clic(this);" id="sulpice">Saint-Sulpice</span></a></li>
-        <li><a class="station" href="#onthetop"><span onClick="clic(this);" id="germain">Saint-Germain-des-Prés</span></a></li>
-      </ul>
-    </nav>
-  </section>
+    <section data-type="sidebar">
+        <header>
+            <menu type="toolbar">
+                <!-- <a href="#"><span class="icon icon-add">add</span></a> -->
+                <!-- <span class="icon icon-add" id="annuler" class="hidden" onclick="annulRech();">add</span> -->
+            </menu>
+                <input id="saisie" type="search" onfocus="affichAnnul();" onblur="cachAnnul();" onkeyup="lettreSaisie();">
+                <button id="annuler"  type="reset" onclick="annulRech();">&nbsp;</button>
+        </header>
+        <nav>
+            <ul id="listeStations">
+                <li><a class="station" href="#onthetop"><span onClick="clic(this);" id="alesia" class="l4">Alésia</span></a></li>
+                <li><a class="station" href="#onthetop"><span onClick="clic(this);" id="denfert" class="l4">Denfert-Rochereau</span></a></li>
+                <li><a class="station" href="#onthetop"><span onClick="clic(this);" id="vet" class="l4">École vétérinaire de Maisons-Alfort</span></a></li>
+                <li><a class="station" href="#onthetop"><span onClick="clic(this);" id="gait" class="l4">Gaîté</span></a></li>
+                <li><a class="station" href="#onthetop"><span onClick="clic(this);" id="mairieMontroug" class="l4">Mairie de Montrouge</span></a></li>
+                <li><a class="station" href="#onthetop"><span onClick="clic(this);" id="marcadet" class="l12">Marcadet - Poissonniers</span></a></li>
+                <li><a class="station" href="#onthetop"><span onClick="clic(this);" id="mont" class="l4">Montparnasse-Bienvenüe</span></a></li>
+                <li><a class="station" href="#onthetop"><span onClick="clic(this);" id="mouton" class="l4">Mouton-Duvernet</span></a></li>
+                <li><a class="station" href="#onthetop"><span onClick="clic(this);" id="orleans" class="l4">Porte d'Orléans</span></a></li>
+                <li><a class="station" href="#onthetop"><span onClick="clic(this);" id="raspail" class="l4">Raspail</span></a></li>
+                <li><a class="station" href="#onthetop"><span onClick="clic(this);" id="germain" class="l4">Saint-Germain-des-Prés</span></a></li>
+                <li><a class="station" href="#onthetop"><span onClick="clic(this);" id="placide" class="l4">Saint-Placide</span></a></li>
+                <li><a class="station" href="#onthetop"><span onClick="clic(this);" id="sulpice" class="l4">Saint-Sulpice</span></a></li>
+                <li><a class="station" href="#onthetop"><span onClick="clic(this);" id="vavin" class="l4">Vavin</span></a></li>
+            </ul>
+        </nav>
+    </section>
 
-  <section id="drawer" role="region">
-    <header>
-      <a href="#"><span class="icon icon-menu">hide sidebar</span></a>
-      <a href="#drawer"><span class="icon icon-menu">show sidebar</span></a>
-      <h1 id="titre">Métros</h1>
-    </header>
-    <div role="main" id="contenu"><span id="onthetop"></span></div>
-  </section>
+    <section id="drawer" role="region">
+        <header>
+            <a href="#"><span class="icon icon-menu">hide sidebar</span></a>
+            <a href="#drawer"><span class="icon icon-menu">show sidebar</span></a>
+            <h1 id="titre">Métros</h1>
+        </header>
+        <div role="main" id="contenu"><span id="onthetop"></span></div>
+    </section>
 
-  <script language="javascript" type="text/javascript" src="scripts/script.js"></script>
+    <script language="javascript" type="text/javascript" src="scripts/script.js"></script>
 
 </body>
 </html>
