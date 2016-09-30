@@ -1,4 +1,6 @@
-    function clic(element)
+    window.location.href = "index.html#drawer";
+	
+	function clic(element)
     {
       var ident = element.id;
       var nom = element.textContent;

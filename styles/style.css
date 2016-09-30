@@ -29,9 +29,9 @@ div[role="main"] {
   overflow: scroll;
 }
 
-div[role="main"] p {
+/*div[role="main"] p {
   margin: 2rem 2.5rem;
-}
+}*/
 
 /* Base icons */
 section[data-type="sidebar"] > header .icon.icon-add {
@@ -115,4 +115,12 @@ section[data-type="sidebar"] > header .icon {
 section[data-type="sidebar"] > header button {
   top: 4px;
   right: 3px;
+}
+
+#contenu ul {
+    padding-left: 1em;
+}
+
+#contenu {
+    padding: 0 1em;
 }
