@@ -42,6 +42,7 @@ section[data-type="sidebar"] > header .icon.icon-add {
 
 .station span {
   display: block;
+  padding: 1rem 1rem 1rem 1rem;
   position: relative;
 }
 
@@ -57,14 +58,14 @@ section[data-type="sidebar"] > header .icon.icon-add {
 .ligne4:before, .ligne12:before {
   content: "4";
   display: block;
-  left: -26px;
-  top: 2px;
+  left: -21px;
+  top: 12px;
   background-color: purple;
   border-radius: 10px;
   width: 20px;
   height: 20px;
   text-align: center;
-  line-height: 18px;
+  line-height: 1.3em;
   position: absolute;
 }
 
@@ -79,10 +80,10 @@ section[data-type="sidebar"] > header .icon.icon-add {
 
 #saisie {
   display: block;
-  top: 4px;
+  top: 5px;
   position: absolute;
-  left: 10px;
-  width: 237px;
+  left: 8px;
+  width: 97%;
   padding-right: 3rem;
 }
 
@@ -92,7 +93,7 @@ section[data-type="sidebar"] > header h1 {
 
 section[data-type="sidebar"] > nav > ul > li > a {
   line-height: 2.35rem;
-  padding: 1rem 1rem 1rem 3rem;
+  /*padding: 1rem 1rem 1rem 3rem;*/
 }
 
 button[type="reset"] {
@@ -123,4 +124,9 @@ section[data-type="sidebar"] > header button {
 
 #contenu {
     padding: 0 1em;
+}
+
+.legende {
+    background: lightgray;
+    padding: .1em;
 }

@@ -149,7 +149,7 @@ section[data-type="sidebar"]:after {
 section[data-type="sidebar"] > nav {
   overflow-y: auto;
   max-height: 449px;
-  margin-right: -0.8rem;
+  /*margin-right: -0.8rem;*/
 }
 
 section[data-type="sidebar"] > nav > h2 {

@@ -1,29 +1,29 @@
     window.location.href = "index.html#drawer";
-	
+
 	function clic(element)
     {
       var ident = element.id;
       var nom = element.textContent;
-      console.log(nom);
+      // console.log(nom);
 
       switch (ident){
         case "mont":
         document.getElementById("contenu").innerHTML="<span id='onthetop'></span><p>À l'origine, il existait deux stations distinctes :</p><p>Montparnasse qui était une station de correspondance entre la ligne 4, propriété de la Compagnie du chemin de fer métropolitain de Paris (CMP), et la ligne 12, qui appartenait à la Société du chemin de fer électrique souterrain Nord-Sud de Paris. Elle se situait sous le boulevard du Montparnasse à l'entrée de l'ancienne gare de Paris-Montparnasse.<br>Bienvenüe, qui fut nommée en hommage à l'ingénieur Fulgence Bienvenüe, le père du métro de Paris, et se situait derrière la gare de Paris-Montparnasse. Elle assurait la correspondance entre les lignes numérotées aujourd'hui 6 et 13.</p><p>À la fin des années 1930, un long couloir de correspondance relie les deux stations Montparnasse et Bienvenüe.</p><p>Le 6 octobre 1942, les deux stations fusionnent en une seule sous le nom de Montparnasse - Bienvenüe. C'est à cette époque qu'est ouverte la « gare du Maine » qui devient l'origine et le terminus des trains de grandes lignes ; l'ancienne gare, située place de Rennes (actuelle place du 18-Juin-1940), devenue trop étroite et trop courte, est d'abord réservée au trafic de banlieue.</p><p>Dans les années 1970, cette dernière est rasée pour céder la place à la tour Montparnasse. Aujourd'hui, tout le trafic SNCF est traité dans la nouvelle gare. Un trottoir roulant est installé dans le couloir souterrain qui assure la correspondance entre la ligne 6 et l'ex-ligne 14 (devenue la ligne 13), côté nouvelle gare, et les lignes 4 et 12, côté rue de Rennes.</p><p>Les arrêts des lignes 4 et 12 sont situés au nord (sous la place du 18-Juin-1940) tandis que les arrêts des lignes 6 et 13 se trouvent au sud près de la porte Océane, à côté de la gare SNCF.</p><p>En 2002, l'ancien trottoir roulant est remplacé par un trottoir roulant rapide. Mais en mai 2009, la RATP annonce qu'il sera démonté et remplacé en mars 2011 par un trottoir roulant classique, en raison de « nombreuses réclamations de la clientèle relatives à la sécurité et au manque de fiabilité ».</p>";
         break;
         case "gait":
-        document.getElementById("contenu").innerHTML="<span id='onthetop'></span><p>La station est ouverte en 1937.</p><p>Le nom provient de la rue de la Gaîté qui était un chemin de terre en 1730, puis une section du chemin vicinal qui menait de la barrière du Montparnasse à Clamart. Son vocable provient des barrières du Maine et du Montparnasse, toutes proches. Des guinguettes, restaurants et théâtres s’y étaient agglutinés et firent de cette rue leur artère principale.<br>Près de l'espace de vente des titres de transport, un couloir transversal rend possible la traversée de l'avenue du Maine qui est infranchissable à cet endroit au niveau de la voirie en raison de la trémie d'accès sud au souterrain de cette avenue ; celui-ci a été créé pour que les automobiles puissent passer sous l'esplanade de la place Raoul-Dautry située devant la gare Montparnasse. Le passage transversal permet aux piétons marchant sur le trottoir situé du côté des numéros impairs de l'avenue du Maine (côté est) de se rendre au centre commercial Gaîté, du côté ouest.</p>";
+        document.getElementById("contenu").innerHTML="<span id='onthetop'></span><p>La station est ouverte en 1937.</p><p>Le nom provient de la rue de la Gaîté qui était un chemin de terre en 1730, puis une section du chemin vicinal qui menait de la barrière du Montparnasse à Clamart. Son vocable provient des barrières du Maine et du Montparnasse, toutes proches. Des guinguettes, restaurants et théâtres s’y étaient agglutinés et firent de cette rue leur artère principale.</p><p>Près de l'espace de vente des titres de transport, un couloir transversal rend possible la traversée de l'avenue du Maine qui est infranchissable à cet endroit au niveau de la voirie en raison de la trémie d'accès sud au souterrain de cette avenue ; celui-ci a été créé pour que les automobiles puissent passer sous l'esplanade de la place Raoul-Dautry située devant la gare Montparnasse. Le passage transversal permet aux piétons marchant sur le trottoir situé du côté des numéros impairs de l'avenue du Maine (côté est) de se rendre au centre commercial Gaîté, du côté ouest.</p>";
         break;
         case "mairieMontroug":
-        document.getElementById("contenu").innerHTML="<span id='onthetop'></span><p>L'ouverture de Mairie de Montrouge, qui intervient le 23 mars 2013, constitue la première étape d'une extension de la ligne 4 jusqu'à Bagneux (prévue pour 2019), qui était envisagée depuis 1929 selon un parcours différent. En 2004, le coût de ce premier tronçon a été évalué à 152 millions d'euros pour une longueur de 780 mètres.</p><p>Par la suite, la ligne atteindra Verdun-Sud entre le cimetière de Bagneux et le Fort de Montrouge, puis le terminus Bagneux au nord de cette commune.</p><p>La ligne devrait permettre à 37 000 voyageurs par jour d'avoir un accès direct au réseau métropolitain. Aux heures de pointe, 4 700 entrants ou sortants sont attendus.</p><p>Elle a vu entrer 2 916 681 voyageurs sur les dix mois d'ouverture en 2013, ce qui la place à la 184 position des stations de métro pour sa fréquentation sur 302.</p>";
+        document.getElementById("contenu").innerHTML="<span id='onthetop'></span><p>L'ouverture de Mairie de Montrouge, qui intervient le 23 mars 2013, constitue la première étape d'une extension de la ligne 4 jusqu'à Bagneux (prévue pour 2019), qui était envisagée depuis 1929 selon un parcours différent. En 2004, le coût de ce premier tronçon a été évalué à 152 millions d'euros pour une longueur de 780 mètres.</p><p>Par la suite, la ligne atteindra Verdun-Sud entre le cimetière de Bagneux et le Fort de Montrouge, puis le terminus Bagneux au nord de cette commune.</p>";
         break;
         case "vet":
-        document.getElementById("contenu").innerHTML="<span id='onthetop'></span><p>La station est ouverte le 19 septembre 1970.</p><p>En 1767, Louis XV le Bien-Aimé fonda la seconde école vétérinaire de France (après Lyon) sur le terrain du manoir médiéval d’Hallefort.</p><p>La station dispose de trois accès qui débouchent sur l'avenue du Général-Leclerc.</p><p>En 2011, 3 371 386 voyageurs sont entrés à cette station. En 2012, ils sont 3 150 748 voyageurs. Elle a vu entrer 3 175 166 voyageurs en 2013 ce qui la place à la 164 position des stations de métro pour sa fréquentation.</p>";
+        document.getElementById("contenu").innerHTML="<span id='onthetop'></span><p>La station est ouverte le 19 septembre 1970.</p><p>En 1767, Louis XV le Bien-Aimé fonda la seconde école vétérinaire de France (après Lyon) sur le terrain du manoir médiéval d’Hallefort.</p><p>La station dispose de trois accès qui débouchent sur l'avenue du Général-Leclerc.</p>";
         break;
         case "orleans":
-        document.getElementById("contenu").innerHTML="<span id='onthetop'></span><p>Sur les quais, le nom de la station est sous-titré « Général Leclerc » du nom de l'avenue sous laquelle elle se trouve.</p><p>Jusqu'en 2011, elle était une des rares stations qui avaient encore des portillons automatiques. Ceux-ci étaient implantés à l'entrée du quai de départ pour Porte de Clignancourt.</p><p>En 2011, 9 598 097 entrants ont été comptabilisés dans cette station. À l'occasion de l'extension de la ligne jusqu'à Mairie de Montrouge, un communiqué de presse de la RATP indique que le trafic moyen journalier s'élève à plus de 27 000 entrants et sortants, ce qui en fait la plus fréquentée des stations se trouvant aux portes de la capitale. Elle a vu entrer 6 598 073 voyageurs en 2013 ce qui la place à la 47 position des stations de métro pour sa fréquentation.</p>";
+        document.getElementById("contenu").innerHTML="<span id='onthetop'></span><p>Sur les quais, le nom de la station est sous-titré « Général Leclerc » du nom de l'avenue sous laquelle elle se trouve.</p><p>À l'occasion de l'extension de la ligne jusqu'à Mairie de Montrouge, un communiqué de presse de la RATP indique que le trafic moyen journalier s'élève à plus de 27 000 entrants et sortants, ce qui en fait la plus fréquentée des stations se trouvant aux portes de la capitale.</p>";
         break;
         case "alesia":
-        document.getElementById("contenu").innerHTML="<span id='onthetop'></span><p>La station est proche de la place Victor-et-Hélène-Basch, dominée par l'église Saint-Pierre-de-Montrouge.</p><p>Le nom de la station vient de la rue d'Alésia, qui passe par cette place. Alésia est un oppidum gaulois qui fut le théâtre de la bataille décisive de la guerre des Gaules qui opposa Jules César à la coalition gauloise menée par l'Arverne Vercingétorix en 52 av. J.-C..</p>";
+        document.getElementById("contenu").innerHTML="<span id='onthetop'></span><p>La station est ouverte le 30 octobre 1909 lors de l'ouverture de la section Raspail - Porte d'Orléans.</p><p>La station est proche de la place Victor-et-Hélène-Basch, dominée par l'église Saint-Pierre-de-Montrouge.</p><p>Le nom de la station vient de la rue d'Alésia, qui passe par cette place. Alésia est un oppidum gaulois qui fut le théâtre de la bataille décisive de la guerre des Gaules qui opposa Jules César à la coalition gauloise menée par l'Arverne Vercingétorix en 52 av. J.-C..</p>";
         break;
         case "mouton":
         document.getElementById("contenu").innerHTML="<span id='onthetop'></span><p>La station est ouverte en 1909.</p><p>Son nom vient de la rue Mouton-Duvernet proche de la station, nommée en l'honneur du général Mouton-Duvernet.</p><p>L'entrée, datant des origines, est en bon état et ornée d'une balustrade d'Hector Guimard.</p><p>La station est rénovée au début de 1969 avec une nouvelle décoration fondée sur du carrelage orange, qui sera ensuite surnommé le « style Mouton ». Vingt autres stations sont transformées sur le même modèle durant les années qui suivent. Mais elle a perdu le style « orange » depuis le 13 mars 2007, à la suite de sa rénovation dans le cadre du programme « Renouveau du métro » comme à la station Gare de l'Est sur les lignes 5 et 7.</p>";
@@ -47,10 +47,10 @@
         document.getElementById("contenu").innerHTML="<span id='onthetop'></span><p>La station est ouverte le 9 janvier 1910.</p><p>Elle se trouve sous le boulevard Saint-Germain, entre le carrefour de la rue de Rennes et celui de la rue du Four.</p><p>Sa dénomination vient de l'église Saint-Germain-des-Prés et de la place Saint-Germain-des-Prés. Childebert 1er, fils de Clovis, fit bâtir une basilique à la demande de saint Germain, évêque de Paris. Ce dernier y fut inhumé, l’église prit dès lors son nom. On rajouta le qualificatif « des-Prés » pour la proximité des Prés-aux-Clercs et pour la distinguer de Saint-Germain-le-Vieux édifié dans la cité.</p><p>Chacune des deux sorties de cette station, situées de part et d'autre du boulevard Saint-Germain, juste à côté de l'église du même nom, est ornée d'un candélabre Val d'Osne.</p>";
         break;
         case "marcadet":
-        document.getElementById("contenu").innerHTML="<span id='onthetop'></span><p>Il y avait à l'origine deux stations distinctes :</p><ul><li>Marcadet, ouverte en 1908 sur la ligne 4 ;</li><li>Poissonniers, ouverte en 1916 sur la ligne A du Nord-Sud.</li></ul><p>À la suite de l'absorption de cette compagnie par la CMP en 1930, un couloir de correspondance est construit entre les deux stations. À sa mise en service le 25 août 1931, les deux stations prennent leur nom actuel, Marcadet – Poissonniers.</p><p>Elle porte donc le nom des deux rues suivantes :</p><ul><li>la rue Marcadet tient son nom d’un lieu-dit, la Mercade, situé à la Chapelle Saint Denis. Peut-être qu’on y tenait un marché, Marcadus, à l’époque de la foire du Lendit ;</li><li>la rue des Poissonniers est l’ancien chemin des Poissonniers emprunté dès 1307 par les marchands de poissons pêchés dans la mer du Nord.</li></ul>";
+        document.getElementById("contenu").innerHTML="<span id='onthetop'></span><p>Il y avait à l'origine deux stations distinctes :</p><ul><li>Marcadet, ouverte en 1908 sur la ligne 4 ;</li><li>Poissonniers, ouverte en 1916 sur la ligne A du Nord-Sud.</li></ul><p>À la suite de l'absorption de cette compagnie par la <span title='Compagnie du chemin de fer métropolitain de Paris' class='legende'>CMP</span> en 1930, un couloir de correspondance est construit entre les deux stations. À sa mise en service le 25 août 1931, les deux stations prennent leur nom actuel, Marcadet – Poissonniers.</p><p>Elle porte donc le nom des deux rues suivantes :</p><ul><li>la rue Marcadet tient son nom d’un lieu-dit, la Mercade, situé à la Chapelle Saint Denis. Peut-être qu’on y tenait un marché, Marcadus, à l’époque de la foire du Lendit&nbsp;;</li><li>la rue des Poissonniers est l’ancien chemin des Poissonniers emprunté dès 1307 par les marchands de poissons pêchés dans la mer du Nord.</li></ul>";
         break;
         case "abbesses":
-        document.getElementById("contenu").innerHTML="<span id='onthetop'></span><p>La station est ouverte le 30 janvier 19131. Le nom de la station vient de la place des Abbesses, qui fait référence à l'abbaye des Dames de Montmartre.</p><p>L'édicule Guimard qui orne son accès était à l'origine à la station Hôtel de Ville. Il fut déplacé à la station Abbesses en 1974. Sa présence sur une station de l'ancienne société Nord-Sud constitue un contre-sens historique car celle-ci n'avait pas fait appel à ce type d'édicule pour ses stations. Il a été inscrit Monument historique par l'arrêté du 29 mai 1978.</p><p>C'est la station de métro la plus profonde de Paris : 36 mètres sous le niveau du sol. Deux escaliers en colimaçon et deux ascenseurs relient la salle des billets (niveau supérieur) aux quais (niveau inférieur).</p><h1>Architecture</h1><p>La station, originaire de la société Nord-Sud, possède initialement un habillage des quais très élaboré : le nom de la station est écrit en carrelage, des fresques typiques Nord-Sud tapissent les murs, les tympans indiquent la direction des trains.</p><p>Dans les années 1950, dans un désir de renouveau architectural et afin de rénover les stations à moindre coût, la station reçoit un carrossage métallique : des plaques métalliques décoratives seront fixées sur les parois verticales.</p><p>En 2006-2007, la station est de nouveau entièrement rénovée, dans son style d'origine pour les quais.</p><h1>Culture populaire</h1><ul><li>Le groupe Birdy Nam Nam a composé en 2005 un morceau nommé Abbesses.</li><li>Le groupe de rap Sexion d'Assaut a tourné certaines scènes d'un de ses clips (Les chroniques du 75) dans la station Abbesses.</li><li>La station a servi de lieu de tournage pour les films Le Fabuleux Destin d'Amélie Poulain de Jean-Pierre Jeunet et Le Locataire de Roman Polanski.</li></ul>";
+        document.getElementById("contenu").innerHTML="<span id='onthetop'></span><p>La station est ouverte le 30 janvier 19131. Le nom de la station vient de la place des Abbesses, qui fait référence à l'abbaye des Dames de Montmartre.</p><p>L'édicule Guimard qui orne son accès était à l'origine à la station Hôtel de Ville. Il fut déplacé à la station Abbesses en 1974. Sa présence sur une station de l'ancienne société Nord-Sud constitue un contre-sens historique car celle-ci n'avait pas fait appel à ce type d'édicule pour ses stations. Il a été inscrit Monument historique par l'arrêté du 29 mai 1978.</p><p>C'est la station de métro la plus profonde de Paris : 36 mètres sous le niveau du sol. Deux escaliers en colimaçon et deux ascenseurs relient la salle des billets (niveau supérieur) aux quais (niveau inférieur).</p><ul><li>Le groupe Birdy Nam Nam a composé en 2005 un morceau nommé Abbesses.</li><li>Le groupe de rap Sexion d'Assaut a tourné certaines scènes d'un de ses clips (Les chroniques du 75) dans la station Abbesses.</li><li>La station a servi de lieu de tournage pour les films Le Fabuleux Destin d'Amélie Poulain de Jean-Pierre Jeunet et Le Locataire de Roman Polanski.</li></ul>";
         break;
         default:
         console.log("pas trouvé");
@@ -73,7 +73,7 @@
     {
       document.getElementById("annuler").classList.remove("hidden");
       var x = document.getElementById("saisie").value;
-      console.log("saisie : "+x);
+      // console.log("saisie : "+x);
       var n = x.length;
 
       var lettreStation = function (letter) {
@@ -104,21 +104,20 @@
 
     function annulRech()
     {
-      document.getElementById("saisie").focus();
-      document.getElementById("saisie").value = " ";
+      // document.getElementById("saisie").focus();
+      document.getElementById("saisie").value = "";
       for (var i = listLi.length - 1; i >= 0; i--) {
         listLi[i].classList.remove("noselec");
       };
+      cachAnnul();
       //document.getElementById("annuler").classList.add("hidden");
     };
-/*
+
     function affichAnnul()
     {
-      document.getElementById("annuler").classList.remove("hidden");
+      annul.classList.remove("hidden");
     };
 
-    function cachAnnul()
-    {
-      document.getElementById("annuler").classList.add("hidden");
-    };
-    */
+    function cachAnnul() {
+      annul.classList.add("hidden");
+    }
